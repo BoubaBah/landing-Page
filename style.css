@@ -1,0 +1,176 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'poppins' sans-serif;
+}
+body{
+	background-color: #e7f79d65;
+}
+
+p{
+	font-size: 1.2rem;
+	line-height: 1.5rem;
+}
+
+nav{
+	position: fixed;
+	background-color: #1b1b1b35;
+	width: 100%;
+	padding: 10px;
+	z-index: 12;
+}
+
+nav .menu{
+	max-width: 1250px;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding : 0 20px;
+}
+
+nav .menu .logo a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.menu ul{
+	display: inline-flex;
+	list-style: none;
+}
+
+.menu ul li{
+	margin-left: 7px;
+}
+
+.menu ul li:first-child{
+	margin-left: 0;
+}
+
+.menu ul li a{
+	margin-left: 7px;
+	text-decoration: none;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
+	padding: 8px 15px;
+	border-radius:5px;
+	transition: all 0.3s ease;
+}
+
+.menu ul li a:hover{
+	background-color: #fff;
+	color: black;
+}
+
+.img{
+	background: url('img1.jpg') 
+	no-repeat;
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	animation: changeBackground 10s  infinite;
+}
+
+.img::before{
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.4);
+	
+}
+
+.center{
+	position: absolute;
+	top: 52%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	padding: 0 20px;
+	text-align: center;
+}
+
+.center .title{
+	color: #fff;
+	font-size: 55px;
+	font-weight: 600;
+}
+
+.center .sub_title{
+	color: #fff;
+	font-size: 40px;
+	font-weight: 600;
+}
+
+.center .btns{
+	margin-top: 20px;
+}
+
+.center .btns button{
+	margin: 0 10px;
+	height: 55px;
+	width: 170px;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: 500;
+	text-transform: uppercase;
+	transition: all 0.3s ease;
+}
+
+.center .btns button:first-child{
+	color: #fff;
+	background: none;
+}
+
+.center .btns button:first-child:hover{
+	background: #fff;
+	color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes changeBackground{
+	0%{
+		background-image: url('img4.jpg');
+	}
+	33%{
+		background-image: url('img2.jpg');
+	}
+	66.66%{
+		background-image: url('img3.jpg');
+	}
+	100%{
+		background-image: url('img1.jpg');
+	}
+}
+
+@media(max-width: 810px){
+	nav{
+		display: none;
+	}
+	h1{
+		font-size: 2rem;
+	}
+}
